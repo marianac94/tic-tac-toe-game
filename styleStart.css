@@ -12,6 +12,42 @@
   max-height: 100%;
 }
 
+.gameContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px;
+  text-align: center;
+}
+
+.gameContainer > .yellow {
+  background-color: yellow;
+  color: white;
+  padding: 20px;
+  font-size: 48px;
+}
+
+.gameContainer > .blue {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  font-size: 48px;
+}
+
+.gameContainer > .gray {
+  background-color: gray;
+  color: purple;
+  padding: 24px;
+  font-size: 24px;
+}
+
+.gameContainer > div {
+  border: 2px solid blue;
+  border-radius: 25px;
+  background-color: lightgray;
+  padding: 35px;
+  color: green;
+}
+
 .first {
   display: flex;
   align-items: stretch;
@@ -57,9 +93,9 @@ table {
   text-align: center;
 }
 
-#gameGrid tr td:hover {
+/* #gameGrid tr td:hover {
   background: #e4e4e4;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 .footer {

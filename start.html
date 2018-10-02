@@ -12,51 +12,103 @@
 <body>
   <div class="container">
 
-    <div class="first">
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.png"></a>
-      </div>
-      <div class="title">who starts?</div>
-    </div>
-
-<form id="playerForm">
-  <div>
-    <input type="radio" name="radio" value="X">X
-    <input type="radio" name="radio" value="O">O
+<div class="first">
+  <div class="logo">
+    <a href="index.html"><img src="img/logo.png"></a>
   </div>
+  <div class="title">who starts?</div>
+</div>
+
+<!-- <form id="playerForm">
+  <h4>Which one would you choose?</h4>
+  <br>
+  <button id="X" type="button">X</button>
+
+  <button id="O" type="button">O</button>
+</form> -->
+
+<form id="playerForm" class="center">
+<div>
+Would you like to be X or O?
+<br><br>
+</div>
+  <input type="radio" name="radio" value="X">X
+  <input type="radio" name="radio" value="O">O
 </form>
 
 <h3>
   <div id="playerOne"></div>
 </h3>
 
-    <table id="gameGrid">
-<!-- table rows -->
-      <tr>
-<!-- individual box -->
-        <td class="item item-1"></td>
-        <td class="item item-2"></td>
-        <td class="item item-3"></td>
-      </tr>
-<!-- table rows -->
-      <tr>
-<!-- individual box -->
-        <td class="item item-4"></td>
-        <td class="item item-5"></td>
-        <td class="item item-6"></td>
-      </tr>
-<!-- table rows -->
-      <tr>
-<!-- individual box -->
-        <td class="item item-7"></td>
-        <td class="item item-8"></td>
-        <td class="item item-9"></td>
-      </tr>
-    </table>
+<div id="gameResult"></div>
+<div id="congratsOrSorry"></div>
 
-    <div class="footer">© all rights reserved</div>
+<section class="gameInfo">
+    <div class="yourTurn">your turn</div>
+    <button class="resetButton">Reset Game</button>
+    <div class="computerTurn">computer's turn</div>
+</section>
+
+<div id="counter" class="center displayNone"></div>
+
+<section id="gameGrid" class="gameContainer displayNone">
+  <div class="item" id='one'></div>
+  <div class="item" id='two'></div>
+  <div class="item" id='three'></div>
+
+  <div class="item" id='four'></div>
+  <div class="item" id='five'></div>
+  <div class="item" id='six'></div>
+
+  <div class="item" id='seven'></div>
+  <div class="item" id='eight'></div>
+  <div class="item" id='nine'></div>
+</section>
+
+<!-- <div id="counter"></div> -->
+
+<!-- <table id="gameGrid"> -->
+<!-- table rows -->
+  <!-- <tr> -->
+<!-- individual box -->
+  <!-- <div> -->
+    <!-- <td class="item1"></td>
   </div>
+  <div>
+    <td class="item2"></td>
+  </div>
+  <div>
+    <td class="item3"></td>
+  </div>
+  </tr> -->
+<!-- table rows -->
+  <!-- <tr> -->
+<!-- individual box -->
+  <!-- <div>
+    <td class="item4"></td>
+  </div>
+  <div>
+    <td class="item5"></td>
+  </div>
+  <div>
+    <td class="item6"></td>
+  </div>
+  </tr> -->
+<!-- table rows -->
+  <!-- <tr> -->
+<!-- individual box -->
+  <!-- <div>
+    <td class="item7"></td>
+  </div>
+  <div>
+    <td class="item8"></td>
+  </div>
+  <div>
+    <td class="item9">
+</table> -->
 
+  <div class="footer">© all rights reserved</div>
+</div>
   <script src="js/app.js"></script>
 </body>
 
