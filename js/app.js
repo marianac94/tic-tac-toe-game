@@ -11,11 +11,13 @@ function clickButton(event) {
       $(this).addClass("yellow")
       $(this).html("X")
     }
-    if (playerOne === "X") {
+    let computer = getComputer()
+    if (getComputer === "O") {
 // playerOne (X) is always yellow
-      $(this).addClass("yellow")
-      $(this).html("X")
+      $(this).addClass("blue")
+      $(this).html("O")
     }
+
 // this function call playGame after every click, to check for the winner and turn
     playGame()
   });
@@ -46,17 +48,17 @@ function checkTurn() {
   if (computerTurn) {
     console.log("checkTurn: it is computer's turn")
 
-    // this is the start of computer's turn
-    let allItems = document.querySelectorAll("td.item")
-    // this needs to be removed on playersOne's turn
-    $(allItems).addClass("unclickable")
-    $("#yourTurn").removeClass("yellow blackText")
-    $("#computerTurn").addClass("yellow blackText")
+// this is the start of computer's turn
+  let allItems = document.querySelectorAll("td.item")
+// this needs to be removed on playersOne's turn
+  $(allItems).addClass("unclickable")
+  $("#yourTurn").removeClass("yellow blackText")
+  $("#computerTurn").addClass("yellow blackText")
 
-    // the time it's going to take the computer to respond to the user (1 second)
-    setTimeout(computerTakeTurn, 1000)
-    currentTurn = "computerTurn"
-    return currentTurn
+// the time it's going to take the computer to respond to the user (1 second)
+  setTimeout(computerTakeTurn, 1000)
+  currentTurn = "computerTurn"
+  return currentTurn
   };
 };
 
@@ -105,10 +107,9 @@ setPlayerOne()
 function getPlayerOne() {
   if (document.getElementById("playerOneSpan") != null) {
     let playerOne = document.getElementById("playerOneSpan").innerHTML
-    console.log('getPlayerOne, playerOne is: ', playerOne)
-
-    return playerOne
-  };
+      console.log('getPlayerOne, playerOne is: ', playerOne)
+  }
+  return getPlayerOne()
 };
 
 
@@ -116,10 +117,8 @@ function getComputer() {
   let playerOne = getPlayerOne()
   if (playerOne === "X") {
     let computer = "O"
-  } else {
-    let computer = "X"
   }
-  return computer
+  return getComputer()
 };
 
 
@@ -158,7 +157,7 @@ function reset() {
 
 function getYellow() {
   let yellowCount = $('#gameGrid .yellow').length
-  return redCount
+  return yellowCount
 }
 
 
@@ -269,12 +268,18 @@ function playGame() {
   let winner = checkForWinner()
   if (!winner) {
     console.log('no winner yet!')
-    checkWhoseTurn()
-  }
-  if (winner) {
+
+  } if (winner) {
     console.log('game over, resetting game.')
 // call reset after 5 seconds...
     setTimeout(reset, 5000)
   }
 }
 playGame()
+
+
+// Resourses:
+// https://github.com/mrkaluzny/tic-tac-toe/blob/master/script.js
+// http://perfecttictactoe.herokuapp.com/
+// https://levelup.gitconnected.com/building-a-tic-tac-toe-game-app-with-javascript-5916e58071fb
+// http://www.thatsoftwaredude.com/content/6189/coding-tic-tac-toe-in-javascript
