@@ -1,58 +1,61 @@
-// start the game with an object called start
-// two properties: playGame & board
-// their two values: true and Array which has a null value that represents the absence of the 9 numbers
+// 1 step = start the game with an object called start with two properties: playGame & board. Their two values: true and Array which has a fill(null) method that fills all the elements of an array from a start index to an end
 let start = {
   playGame: true,
   board: Array(9).fill(null)
 }
 
 
-// start the function of
-let main = (event) => {
-// start variable called newIndex that calls the event target and starts accesing the dataset of newIndex (in this case, the Array with the 9 elements in it)
-  let rule = event.target.dataset.newIndex
-// call the function to start the game between user and computer
-    userPlay(rule)
-// call the function to start picking random numbers from the Array(the board)
-      computerPlay(start.board)
+// 2 step = start variable called rule that calls the event target and starts accesing the dataset of rule (in this case, the Array with the 9 elements in it, call the function to start the game between user and computer, call the function to start picking random numbers from the Array(the board)
+let main = (e) => {
+  let rule = e.target.dataset.rule
+userPlay(rule)
+computerPlay(start.board)
 }
 
-// defining play as a function
-let userPlay = (rule) => {
-  if (calculateWinner(start.board) || start.board[rule]) return;
-  start.board[rule] = start.playGame ? '0' : 'X' //choice of the user if X or O
 
-// change the player
-  start.playGame = !start.playGame
-    render(start.board)
-}
+// 3 step = the question "Who starts?" and user choose X or O
+let modal = document.querySelector('.modal-wrapper')
+document.querySelector('#playAs0')
+.addEventListener('click', (e) => {
+  modal.classList.add('none') //?
+});
 
-// function for the computer to add random X or O from the Array
+document.querySelector('#playAsX')
+  .addEventListener('click', (e) => {
+    modal.classList.add('none') //?
+    start.playGame = !start.playGame
+});
+
+
+// 4 step = taking a random number from the array to show when user or computer clicks on the "box" in
 let computerPlay = (boardConfig) => {
   let playAt = Math.floor(Math.random() * 9)
-  if ( boardConfig[playAt] === null )
+  if(boardConfig[playAt] === null)
     return userPlay(playAt)
-  return computerPlay(boardConfig)
+      return computerPlay(boardConfig)
 }
-
-
 let render = (arr) => {
-  let $ = s => document.querySelector(s)
-  let $$ = s => document.querySelectorAll(s)
-  let playerName = start.playGame ? '0' : 'X'; //choice of the user if X or O
+  let $ = one => document.querySelector(one)
+  let $$ = all => document.querySelectorAll(all)
+  let playerName = start.playGame ? '0' : 'X';
 
-
-  $$('#box').forEach( (element, rule) => element.innerHTML = arr[rule] || '' )
+$$('#box').forEach((element, rule) => element.innerHTML = arr[rule] || '')
   $('#status').innerHTML = `Player ${playerName} should play!`
 
-  // finally give up if someone won
-  if (calculateWinner(start.board))  {
+if (calculateWinner(start.board))  {
     $('#status').innerHTML = `player ${calculateWinner(start.board)} Won!`
     $('#reset').classList.add('primary')
   }
 }
 
-// the variable lines hold the different convinations of arrays that the Math.random
+let userPlay = (rule) => {
+  if (calculateWinner(start.board) || start.board[rule]) return;
+  start.board[rule] = start.playGame ? '0' : 'X'
+
+  start.playGame = !start.playGame
+    render(start.board)
+}
+
 let calculateWinner = (squares) => {
   let lines = [
     [0, 1, 2],
@@ -65,7 +68,8 @@ let calculateWinner = (squares) => {
     [2, 4, 6],
   ];
 
-// stating a for loop that goes through each of the lines (inside the array) and returns one element from each at each click in the box
+
+// 5 step = stating a for loop that goes through each of the lines (inside the array) and returns one element from each at each click in the box
   for (let i = 0; i < lines.length; i++) {
     let [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -76,32 +80,15 @@ let calculateWinner = (squares) => {
 }
 
 
-// heck event listners
-document.querySelectorAll('#box')
+// 6 step = this is the main function when user click "box" the selected element appears at the right place
+document.querySelectorAll('.box')
 .forEach(element => { element.addEventListener('click', main) })
 
 
-
-// selecting the new class made by jQuery
+// 7 step = the user click on "reset" for the game to star over again
 document.querySelector('#reset')
-// add a click function to remove everything from the board when the reset button is clicked by the user on the game
-.addEventListener('click', (event) => {
+.addEventListener('click', (e) => {
   render(Array(9).fill(null))
   start.board.fill(null)
   event.target.classList.remove('primary')
-});
-
-// used querySelector for selected class in HTML
-let modal = document.querySelector('.choice')
-// click function for the user when clicking O
-document.querySelector('#playAs0')
-.addEventListener('click',(e) => {
-  modal.classList.add('none')
-});
-
-// click function for the user when clicking X
-document.querySelector('#playAsX')
-  .addEventListener('click',(e) => {
-    modal.classList.add('none')
-    start.playGame = !start.playGame
 });

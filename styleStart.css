@@ -101,7 +101,7 @@ body {
 }
 
 /* choice for choosing if X or O */
-.choice {
+.modal-wrapper {
   position: absolute;
   top: 0;
   left: 0;
