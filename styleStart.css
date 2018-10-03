@@ -85,7 +85,7 @@ body {
   justify-content: center;
 }
 
-.table {
+.grid {
   display: grid;
   grid-template-columns: 6rem 6rem 6rem;
   grid-template-rows: 6rem 6rem 6rem;

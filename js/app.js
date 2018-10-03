@@ -6,8 +6,10 @@ const start = {
 
 
 // 2 step = start variable called rule that calls the event target and starts accesing the dataset of rule (in this case, the Array with the 9 elements in it, call the function to start the game between user and computer, call the function to start picking random numbers from the Array(the board)
-const rule = (e) => {
-  const rule = e.target.dataset.rule
+const main = (e) => {
+  const rule = e.target.dataset.index
+  console.log(rule);
+  console.log(e.currentTarget);
 
   play(rule)
     playForMe(start.board)
@@ -27,7 +29,7 @@ const play = (rule) => {
     render(start.board)
 }
 
-// 4 step = taking a random number from the array to show when user or computer clicks on the "box" in
+// 4 step = taking a random number from the array to show when user or computer clicks on the "box"
 const playForMe = (boardConfig) => {
   const playAt = Math.floor(Math.random() * 9)
   if(boardConfig[playAt] === null)
@@ -37,10 +39,10 @@ const playForMe = (boardConfig) => {
 
 const render = (array) => {
   const $ = one => document.querySelector(one)
-  const $$ = all => document.querySelectorAll(all)
+  const $$ = one => document.querySelectorAll(one)
   const playerName = start.playGame ? '0' : 'X';
 
-$$('#hole').forEach((element, rule) => element.innerHTML = array[rule] || '')
+$$('box').forEach((element, rule) => element.innerHTML = array[rule] || '')
   $('#status').innerHTML = `Player ${playerName} should play!`
 
 if (calculateWinner(start.board))  {
@@ -74,9 +76,9 @@ for (let i = 0; i < possibleAnswers.length; i++) {
 
 
 // 6 step = this is the main function when user click "box" the selected element appears at the right place
-document.querySelectorAll('#hole')
+document.querySelectorAll('.box')
 .forEach(element => {
-  element.addEventListener('click', rule)
+  element.addEventListener('click', main)
 });
 
 
