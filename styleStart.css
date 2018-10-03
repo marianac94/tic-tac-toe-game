@@ -91,7 +91,7 @@ body {
   grid-template-rows: 6rem 6rem 6rem;
 }
 
-#box {
+.box {
   border: solid 3px #253C80;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
