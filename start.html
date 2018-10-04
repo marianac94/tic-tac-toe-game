@@ -12,6 +12,7 @@
 <body>
   <div class="container">
 
+
 <div class="first">
   <div class="logo">
     <a href="index.html"><img src="img/logo.png"></a>
@@ -29,23 +30,28 @@
       <div class="title">
         <h3>who starts?</h3>
       </div>
-      <button id="playAsX">X</button>
-      <button id="playAs0">0</button>
+      <button id="playAsX" onmousedown="beep.play()">X</button>
+      <button id="playAs0" onmousedown="beep.play()">0</button>
     </div>
   </div>
 
 <div class="content">
-<div class="grid">
-  <box id="hole" class="box" data-index="0"></box>
-  <box id="hole" class="box" data-index="1"></box>
-  <box id="hole" class="box" data-index="2"></box>
-  <box id="hole" class="box" data-index="3"></box>
-  <box id="hole" class="box" data-index="4"></box>
-  <box id="hole" class="box" data-index="5"></box>
-  <box id="hole" class="box" data-index="6"></box>
-  <box id="hole" class="box" data-index="7"></box>
-  <box id="hole" class="box" data-index="8"></box>
+  <div class="grid">
+    <box id="hole" class="box" data-index="0" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="1" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="2" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="3" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="4" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="5" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="6" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="7" onmousedown="beep2.play()"></box>
+    <box id="hole" class="box" data-index="8" onmousedown="beep2.play()"></box>
+  </div>
 </div>
+
+<div ="bothScores">
+  <div class="playerScore">Player score:</div>
+  <div class="computerScore">Computer score:</div>
 </div>
 
   <div class="footer">© all rights reserved</div>

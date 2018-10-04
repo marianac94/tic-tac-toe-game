@@ -4,10 +4,9 @@ const start = {
   board: Array(9).fill(null),
 }
 
-
 // start variable called rule that calls the event target and starts accesing the dataset of rule (in this case, the Array with the 9 elements in it, call the function to start the game between user and computer, call the function to start picking random numbers from the Array(the board)
 const main = (e) => {
-  const rule = e.target.dataset.index
+  const rule = e.target.dataset.index //<-- highlight this
   console.log(rule);
   console.log(e.currentTarget);
 
@@ -105,3 +104,12 @@ document.querySelector('#playAsX')
     modal.classList.add("none")
 start.playGame = !start.playGame
 })
+
+
+// sound when the user decides if X or O at the beginning
+let beep = new Audio();
+  beep.src = "sounds/singleClick.mp3";
+
+// sound when clicking on boxes
+let beep2 = new Audio();
+  beep2.src = "sounds/soundBox.mp3";

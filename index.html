@@ -21,10 +21,14 @@
 <!-- Message displayed on the first screen -->
     <div class="text">welcome to tic-tac-toe</div>
 <!-- Buttons for the user to enter to the options: -->
-      <a id="start" href="start.html">start game</a>
-      <a id="options" href="options.html">options</a>
-      <a id="about" href="about.html">about</a>
+      <a id="start" onmousedown="beep.play()" href="start.html">start game</a>
+      <a id="options" onmousedown="beep.play()" href="options.html">options</a>
+      <a id="about" onmousedown="beep.play()" href="about.html">about</a>
     </div>
+
+<audio controls>
+  <source src="sounds/audio.mp3" type="audio/mpeg">
+</audio>
 
   </div>
 <div class="footer">© all rights reserved</div>
