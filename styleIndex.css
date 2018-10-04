@@ -12,18 +12,19 @@
 }
 
 .intro {
+  align-items: center;
   text-align: center;
-  display: inline-block;
   height: 200px;
-  width: 600px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  width: 100%;
+  position: relative;
+  top: 55%;
+  left: 0;
+  margin: auto;
   margin-top: -100px;
-  margin-left: -200px;
 }
 
-.welcome {
+.text {
+  align-items: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -32,10 +33,15 @@
   color: white;
 }
 
-#start {
+a {
+  width: 18%;
+  text-align: center;
+  display: inline-block;
   display: block;
   border: 3px;
   padding: 14px 0;
+  border-radius: 10px;
+  margin: 10px;
   font-size: 12px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
@@ -44,44 +50,14 @@
   text-transform: uppercase;
   color: white;
   text-decoration-line: none;
-  margin: 10px;
-}
-
-#options {
-  display: block;
-  border: 3px;
-  padding: 14px 0;
-  font-size: 12px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: white;
-  text-decoration-line: none;
-  margin: 10px;
-}
-
-#about {
-  display: block;
-  border: 3px;
-  padding: 14px 0;
-  font-size: 12px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: white;
-  text-decoration-line: none;
-  margin: 10px;
 }
 
 a:hover {
-  position:relative;
+  position: relative;
   background-color: #FDB714;
   color: #253C80;
-  display: block;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .footer {

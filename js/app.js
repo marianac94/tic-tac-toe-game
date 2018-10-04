@@ -1,11 +1,11 @@
-// 1 step = start the game with an object called start with two properties: playGame & board. Their two values: true and Array which has a fill(null) method that fills all the elements of an array from a start index to an end
+// start the game with an object called start with two properties: playGame & board. Their two values: true and Array which has a fill(null) method that fills all the elements of an array from a start index to an end
 const start = {
   playGame: true,
   board: Array(9).fill(null),
 }
 
 
-// 2 step = start variable called rule that calls the event target and starts accesing the dataset of rule (in this case, the Array with the 9 elements in it, call the function to start the game between user and computer, call the function to start picking random numbers from the Array(the board)
+// start variable called rule that calls the event target and starts accesing the dataset of rule (in this case, the Array with the 9 elements in it, call the function to start the game between user and computer, call the function to start picking random numbers from the Array(the board)
 const main = (e) => {
   const rule = e.target.dataset.index
   console.log(rule);
@@ -16,7 +16,7 @@ const main = (e) => {
 }
 
 
-// Making the variable play with the function rule work, the if statement step should be skiped is box is already filled or someone have won
+// making the variable play with the function rule work, the if statement step should be skiped is box is already filled or someone have won
 const play = (rule) => {
   if (calculateWinner(start.board) || start.board[rule]) return ;
 
@@ -29,7 +29,7 @@ const play = (rule) => {
     render(start.board)
 }
 
-// 4 step = taking a random number from the array to show when user or computer clicks on the "box"
+// taking a random number from the array to show when user or computer clicks on the "box"
 const playForMe = (boardConfig) => {
   const playAt = Math.floor(Math.random() * 9)
   if(boardConfig[playAt] === null)
@@ -64,7 +64,7 @@ const calculateWinner = (miniBoxes) => {
   ];
 
 
-// 5 step = stating a for loop that goes through each of the lines (inside the array) and returns one element from each at each click in the box
+// stating a for loop that goes through each of the lines (inside the array) and returns one element from each at each click in the box
 for (let i = 0; i < possibleAnswers.length; i++) {
   const [a, b, c] = possibleAnswers[i];
   if (miniBoxes[a] && miniBoxes[a] === miniBoxes[b] && miniBoxes[a] === miniBoxes[c]) {
@@ -75,14 +75,14 @@ for (let i = 0; i < possibleAnswers.length; i++) {
 }
 
 
-// 6 step = this is the main function when user click "box" the selected element appears at the right place
+// this is the main function when user click "box" the selected element appears at the right place
 document.querySelectorAll('.box')
 .forEach(element => {
   element.addEventListener('click', main)
 });
 
 
-// 7 step = the user click on "reset" for the game to star over again
+// the user click on "reset" for the game to star over again
 document.querySelector('#reset')
 .addEventListener('click', (e) => {
   render(Array(9).fill(null))
@@ -91,7 +91,7 @@ document.querySelector('#reset')
 });
 
 
-// 3 step = the question "Who starts?" and user choose X or O
+// the question "Who starts?" and user choose X or O
 const modal = document.querySelector('.modal-wrapper')
 
 
