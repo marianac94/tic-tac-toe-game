@@ -1,5 +1,5 @@
 .container {
-  background-image: url("img/background-01.png");
+  background-image: url("../img/background-01.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -23,10 +23,10 @@
   margin-top: -100px;
 }
 
-.text {
+.welcome {
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -35,6 +35,8 @@
 
 a {
   width: 18%;
+  left: 40%;
+  position: relative;
   text-align: center;
   display: inline-block;
   display: block;
@@ -42,7 +44,7 @@ a {
   padding: 14px 0;
   border-radius: 10px;
   margin: 10px;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;

@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Tic-Tac-Toe</title>
+  <title>Index</title>
 
-  <link rel="stylesheet" href="styleIndex.css">
+  <link rel="stylesheet" href="css/indexStyle.css">
 
 <!-- Adding jQuery to the js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
@@ -17,18 +17,19 @@
 <body>
   <div class="container">
 
-    <div class="intro">
-<!-- Message displayed on the first screen -->
-    <div class="text">welcome to tic-tac-toe</div>
-<!-- Buttons for the user to enter to the options: -->
-      <a id="start" onmousedown="beep.play()" href="start.html">start game</a>
-      <a id="options" onmousedown="beep.play()" href="options.html">options</a>
-      <a id="about" onmousedown="beep.play()" href="about.html">about</a>
-    </div>
-
-<audio controls>
+<audio autoplay>
   <source src="sounds/audio.mp3" type="audio/mpeg">
+  <p>If you can read this, your browser does not support the audio element.</p>
 </audio>
+
+<div class="intro">
+<!-- Message displayed on the first screen -->
+<div class="welcome">welcome to tic-tac-toe</div>
+<!-- Buttons for the user to enter to the options: -->
+  <a id="start" href="game.html">start</a>
+  <a id="about" href="about.html">about</a>
+  <a id="back" href="login.html">login</a>
+</div>
 
   </div>
 <div class="footer">© all rights reserved</div>

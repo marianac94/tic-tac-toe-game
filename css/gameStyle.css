@@ -1,5 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  background-image: url("img/background2-01.png");
+  background-image: url("../img/background2-01.png");
   background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,12 +45,6 @@ body {
   color: #253C80;
   min-height: 100vh;
   width: 100%;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .body-header {
