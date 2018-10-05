@@ -48,7 +48,10 @@ $$('box').forEach((element, rule) => element.innerHTML = array[rule] || '')
 $('#status').innerHTML = `Player ${playerName} is next`
 
 
+// variable for score when player wins add +1
 // let score = 0;
+
+
 // starting if statment on who won and when to reset the game (this is displayed on the screen)
 if (calculateWinner(start.board))  {
     // score++;
@@ -57,26 +60,6 @@ if (calculateWinner(start.board))  {
     // $('.points').val('Score: ' + score);
   }
 }
-
-
-// adding the score for each game winner (X and O)
-// function scoreIncrement(elem) {
-//     if(!$(elem).data('scored')){
-//        score++;
-//        $("#score").html(score);
-//        $("#finalScore").html(score);
-//        $(elem).data('scored', true);
-//        console.log(score);
-//        console.log(elem);
-//     }
-// }
-//
-// $('#finalScore').text(score);
-// function foundMatchingBlocks(event, params) {
-//       target.classList.remove();
-//       score += 1;
-//       $('#finalScore').text(score);
-// }
 
 
 // array with all possible answers for computer to add when user clicks

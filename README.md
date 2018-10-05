@@ -2,6 +2,7 @@
 
 **Tic Tac Toe Game** is played on a 3x3 grid. The computer is the X and the player the O. Players take turns putting their marks in empty squares. The first player to get 3 of their marks in a row is the winner. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
+http://icky-bone.surge.sh/home.html
 
 
 
