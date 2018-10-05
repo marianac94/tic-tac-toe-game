@@ -1,7 +1,7 @@
 # Tic Tac Toe Game
 
 **Tic Tac Toe Game** is played on a 3x3 grid. The computer is the X and the player the O. Players take turns putting their marks in empty squares. The first player to get 3 of their marks in a row is the winner. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
-___
+
 
 
 
@@ -14,16 +14,16 @@ ___
 2. CSS
 3. JavaScript
 4. jQuery
-***
+
 
 
 
 ## Further Challenges
-..* Display a message to indicate which **player's turn** is about to be played (X or O).
-..* **Show message** and add sound when player wins.
-..* Display **different colors** for each X or O
-..* Research about **different technologies** and resources and add them to the game.
-***
+- Display a message to indicate which **player's turn** is about to be played (X or O).
+- **Show message** and add sound when player wins.
+- Display **different colors** for each X or O
+- Research about **different technologies** and resources and add them to the game.
+
 
 
 
