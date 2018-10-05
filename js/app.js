@@ -47,26 +47,29 @@ $$('box').forEach((element, rule) => element.innerHTML = array[rule] || '')
 // the box that is telling who is next (this is displayed on the screen)
 $('#status').innerHTML = `Player ${playerName} is next`
 
+
+// let score = 0;
 // starting if statment on who won and when to reset the game (this is displayed on the screen)
 if (calculateWinner(start.board))  {
+    // score++;
     $('#status').innerHTML = `Player ${calculateWinner(start.board)} Won!`
     $('#reset').classList.add('primary')
+    // $('.points').val('Score: ' + score);
   }
 }
 
 
 // adding the score for each game winner (X and O)
-// let score = 0;
-//
 // function scoreIncrement(elem) {
 //     if(!$(elem).data('scored')){
 //        score++;
 //        $("#score").html(score);
 //        $("#finalScore").html(score);
 //        $(elem).data('scored', true);
+//        console.log(score);
+//        console.log(elem);
 //     }
 // }
-// var score = 0;
 //
 // $('#finalScore').text(score);
 // function foundMatchingBlocks(event, params) {
