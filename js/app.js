@@ -1,28 +1,26 @@
-// start the game with an object called start with two properties: playGame & board. Their two values: true and Array which has a fill(null) method that fills all the elements of an array from a start index to an end
+// made object with two properties (fill method is for filling elements from the array when called)
 const start = {
   playGame: true,
   board: Array(9).fill(null),
 }
 
-// start variable called rule that calls the event target and starts accesing the dataset of rule (in this case, the Array with the 9 elements in it, call the function to start the game between user and computer, call the function to start picking random numbers from the Array(the board)
+// var rule that makes the target event fo through all the data-index from the table in HTML
 const main = (e) => {
-  const rule = e.target.dataset.index //<-- highlight this
-  console.log(rule);
-  console.log(e.currentTarget);
+  const rule = e.target.dataset.index
+    console.log(rule);
+      console.log(e.currentTarget);
 
   play(rule)
     playForMe(start.board)
 }
 
 
-// making the variable play with the function rule work, the if statement step should be skiped is box is already filled or someone have won
 const play = (rule) => {
   if (calculateWinner(start.board) || start.board[rule]) return ;
 
 // what the user choose to play with:
   start.board[rule] = start.playGame ? '0' : 'X'
-
-  console.log(start.board, start.playGame, calculateWinner(start.board))
+    console.log(start.board, start.playGame, calculateWinner(start.board))
 
   start.playGame = !start.playGame
     render(start.board)
@@ -36,20 +34,27 @@ const playForMe = (boardConfig) => {
       return playForMe(boardConfig)
 }
 
+
 const render = (array) => {
   const $ = one => document.querySelector(one)
   const $$ = one => document.querySelectorAll(one)
   const playerName = start.playGame ? '0' : 'X';
 
+// selecting all box elements from the table in html
 $$('box').forEach((element, rule) => element.innerHTML = array[rule] || '')
-  $('#status').innerHTML = `Player ${playerName} should play!`
 
+// the box that is telling who is next (this is displayed on the screen)
+$('#status').innerHTML = `Player ${playerName} is next`
+
+// starting if statment on who won and when to reset the game (this is displayed on the screen)
 if (calculateWinner(start.board))  {
-    $('#status').innerHTML = `player ${calculateWinner(start.board)} Won!`
+    $('#status').innerHTML = `Player ${calculateWinner(start.board)} Won!`
     $('#reset').classList.add('primary')
   }
 }
 
+
+// array with all possible answers for computer to add when user clicks
 const calculateWinner = (miniBoxes) => {
   const possibleAnswers = [
     [0, 1, 2],
@@ -63,7 +68,7 @@ const calculateWinner = (miniBoxes) => {
   ];
 
 
-// stating a for loop that goes through each of the lines (inside the array) and returns one element from each at each click in the box
+// depending on the if statement is the level of difficulty that is given to the user
 for (let i = 0; i < possibleAnswers.length; i++) {
   const [a, b, c] = possibleAnswers[i];
   if (miniBoxes[a] && miniBoxes[a] === miniBoxes[b] && miniBoxes[a] === miniBoxes[c]) {
@@ -74,7 +79,7 @@ for (let i = 0; i < possibleAnswers.length; i++) {
 }
 
 
-// this is the main function when user click "box" the selected element appears at the right place
+// when user click each "box" to select where to add his X or O
 document.querySelectorAll('.box')
 .forEach(element => {
   element.addEventListener('click', main)
@@ -82,17 +87,17 @@ document.querySelectorAll('.box')
 
 
 // the user click on "reset" for the game to star over again
+// removing all data that was filled from the array
 document.querySelector('#reset')
 .addEventListener('click', (e) => {
   render(Array(9).fill(null))
   start.board.fill(null)
-  e.target.classList.remove('primary')
+  e.target.classList.remove('primary') // <- primary is the ID name from the class #remove (made at the top)
 });
 
 
 // the question "Who starts?" and user choose X or O
 const modal = document.querySelector('.modal-wrapper')
-
 
 document.querySelector('#playAs0')
   .addEventListener('click', (e) => {
@@ -105,6 +110,8 @@ document.querySelector('#playAsX')
 start.playGame = !start.playGame
 })
 
+
+// added some cool sounds when clicking and entering the page, feel free to help and add more cool stuff like this! 
 
 // sound when the user decides if X or O at the beginning
 let beep = new Audio();
