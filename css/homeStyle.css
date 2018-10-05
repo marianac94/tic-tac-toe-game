@@ -1,0 +1,78 @@
+.container {
+  background-image: url("../img/background-01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.intro {
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  top: 55%;
+  left: 0;
+  margin: auto;
+  margin-top: -100px;
+}
+
+.welcome {
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: white;
+}
+
+a {
+  width: 18%;
+  left: 40%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  display: block;
+  border: 3px;
+  padding: 14px 0;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration-line: none;
+}
+
+a:hover {
+  position: relative;
+  background-color: #FDB714;
+  color: #253C80;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+  font-size: 8px;
+  text-transform: uppercase;
+  color: white;
+}

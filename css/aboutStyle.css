@@ -24,26 +24,13 @@
   margin: 40px;
 }
 
-.iconBox {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 50px;
-  top: 24%;
-  left: 46%;
-  margin: 10px;
-}
-
 i {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 50px;
-  margin: 10px;
-  display: inline-block;
-  text-align: center;
-  font-size: 70px;
+  font-size: 80px;
   color: #FDB714;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -250%);
 }
 
 .box {

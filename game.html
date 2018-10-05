@@ -10,51 +10,51 @@
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
 
-<div class="first">
-  <div class="logo">
-    <a href="index.html"><img src="img/logo.png" onmousedown="beep.play()"></a>
-  </div>
-</div>
-
-<div class="body-header">
-    <p id="status">Player 0 should play!</p>
-    <p class="main-text">Tic Tac Toe</p>
-    <button id="reset" class="reset-btn">RESET</button>
-  </div>
-
-  <div class="modal-wrapper">
-    <div class="modal">
-      <div class="title">
-        <h3>who starts?</h3>
+    <div class="first">
+      <div class="logo">
+        <a href="home.html"><img src="img/logo.png" onmousedown="beep.play()"></a>
       </div>
-      <button id="playAsX" onmousedown="beep.play()">X</button>
-      <button id="playAs0" onmousedown="beep.play()">0</button>
     </div>
-  </div>
 
-<div class="content">
-  <div class="grid">
-    <box id="hole" class="box" data-index="0" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="1" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="2" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="3" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="4" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="5" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="6" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="7" onmousedown="beep2.play()"></box>
-    <box id="hole" class="box" data-index="8" onmousedown="beep2.play()"></box>
-  </div>
-</div>
+    <div class="body-header">
+      <p id="status">Player 0 should play!</p>
+      <p class="main-text">Tic Tac Toe</p>
+      <button id="reset" class="reset-btn">RESET</button>
+    </div>
 
-<audio autoplay>
+    <div class="modal-wrapper">
+      <div class="modal">
+        <div class="title">
+          <h3>who starts?</h3>
+        </div>
+        <button id="playAsX" onmousedown="beep.play()">X</button>
+        <button id="playAs0" onmousedown="beep.play()">0</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="grid">
+        <box id="hole" class="box" data-index="0" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="1" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="2" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="3" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="4" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="5" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="6" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="7" onmousedown="beep2.play()"></box>
+        <box id="hole" class="box" data-index="8" onmousedown="beep2.play()"></box>
+      </div>
+    </div>
+
+    <audio autoplay>
   <source src="sounds/audio.mp3" type="audio/mpeg">
   <p>If you can read this, your browser does not support the audio element.</p>
 </audio>
 
-  <div class="footer">© all rights reserved</div>
-</div>
+    <div class="footer">© all rights reserved</div>
+  </div>
   <script src="js/app.js"></script>
 </body>
 

@@ -11,56 +11,98 @@
   max-height: 100%;
 }
 
-.intro {
+.yellowBck {
+  background-color: #FDB714;
+  border-radius: 15px;
   align-items: center;
   text-align: center;
-  height: 200px;
-  width: 100%;
+  padding: 14px 0;
+  height: 400px;
+  width: 30%;
   position: relative;
-  top: 55%;
+  top: 40%;
   left: 0;
   margin: auto;
   margin-top: -100px;
 }
 
-.welcome {
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: white;
+.logo {
+  align-self: center;
+  margin: 40px;
 }
 
-a {
-  width: 18%;
-  left: 40%;
+.userInfo {
+  left: 5%;
   position: relative;
   text-align: center;
   display: inline-block;
   display: block;
-  border: 3px;
-  padding: 14px 0;
-  border-radius: 10px;
+}
+
+.login {
+  left: 5%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  display: block;
+}
+
+input {
+  display: block;
+  width: 80%;
+  padding: 8px 0;
+  border-radius: 7px;
   margin: 10px;
-  font-size: 13px;
-  cursor: pointer;
+}
+
+input[type="text"], [type="password"] {
+  border: 3px #253C80 solid;
+  background: transparent;
+  padding-left: 12px;
+}
+
+input[type="submit"] {
+  background-color: #253C80;
+  color: #FDB714;
+  border: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+::placeholder {
+  padding-left: 0;
+  color: #253C80;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+a {
+  position: relative;
+  display: block;
+  margin: 10px;
+  font-size: 9px;
+  color: #253C80;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   text-decoration-line: none;
 }
 
 a:hover {
   position: relative;
-  background-color: #FDB714;
-  color: #253C80;
-  font-size: 14px;
-  font-weight: 800;
+  color: white;
+  font-size: 10px;
 }
+
+.login {}
 
 .footer {
   position: fixed;

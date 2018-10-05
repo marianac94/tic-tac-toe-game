@@ -144,8 +144,13 @@ body {
 }
 
 @keyframes blink {
-  from { background: yellow; }
-  to { background: white; }
+  from {
+    background: yellow;
+  }
+
+  to {
+    background: white;
+  }
 }
 
 .footer {
