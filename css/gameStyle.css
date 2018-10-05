@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
 }
@@ -18,11 +18,19 @@
   max-height: 100%;
 }
 
-.first {
+#hole {
+  align-items: center;
+  text-align: center;
+  color: #FDB714;
+  font: 100px 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+/* .first {
   display: flex;
   align-items: stretch;
   margin: 15px;
-}
+} */
 
 .logo {
   align-self: center;
@@ -49,7 +57,7 @@ body {
 
 .body-header {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -59,24 +67,55 @@ body {
   font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
   color: #253C80;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 5px;
   text-transform: uppercase;
+  margin-top: -50px;
+  margin-bottom: 40px;
+
 }
 
 #status {
+  flex-grow: 0;
   display: inline-flex;
-  background: #253C80;
+  padding: 15px 45px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 60px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: #253C80;
   color: white;
-  padding: 12px 8px;
+  text-decoration-line: none;
 }
 
 .reset-btn {
-  display: inline-flex;
   flex-grow: 0;
-  border: solid 2px #253C80;
-  padding: 4px;
+  display: inline-flex;
+  padding: 15px 45px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 60px;
+  font-size: 16px;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: #253C80;
+  color: white;
+  text-decoration-line: none;
+}
+
+.reset-btn:hover {
+  position: relative;
+  background-color: #FDB714;
+  color: #253C80;
+  font-weight: 800;
 }
 
 .content {
@@ -87,12 +126,12 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 6rem 6rem 6rem;
-  grid-template-rows: 6rem 6rem 6rem;
+  grid-template-columns: 8rem 8rem 8rem;
+  grid-template-rows: 8rem 8rem 8rem;
 }
 
 .box {
-  border: solid 3px #253C80;
+  border: solid 2px #253C80;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-size: 4.2rem;
@@ -107,17 +146,26 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
+h3 {
+  margin: 8px;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #253C80;
+}
+
 .modal {
-  padding: 5vw;
-  background: #ffffff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.25), 2px 2px 6px 0 rgba(255, 255, 255, 0.25);
+  padding: 6vw;
+  background: white;
+  color: #253C80;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.30), 10px 8px 10px 0 rgba(255, 255, 255, 0.30);
 }
 
 .modal .head h3 {
@@ -127,12 +175,23 @@ body {
 }
 
 .modal button {
-  padding: 2px 16px;
+  padding: 6px 35px;
   background: #253C80;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   color: white;
-  margin: 8px;
+  font-size: 22px;
+  margin: 18px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+.modal button:hover {
+  position: relative;
+  background-color: #FDB714;
+  font-weight: 800;
+  color: #253C80;
 }
 
 .none {
@@ -145,11 +204,11 @@ body {
 
 @keyframes blink {
   from {
-    background: yellow;
+    background: #253C80;
   }
 
   to {
-    background: white;
+    background: #FDB714;
   }
 }
 
@@ -162,7 +221,7 @@ body {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   font-size: 8px;
   text-transform: uppercase;
   color: white;

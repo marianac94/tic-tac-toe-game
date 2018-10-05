@@ -4,6 +4,7 @@ const start = {
   board: Array(9).fill(null),
 }
 
+
 // var rule that makes the target event fo through all the data-index from the table in HTML
 const main = (e) => {
   const rule = e.target.dataset.index
@@ -54,6 +55,27 @@ if (calculateWinner(start.board))  {
 }
 
 
+// adding the score for each game winner (X and O)
+// let score = 0;
+//
+// function scoreIncrement(elem) {
+//     if(!$(elem).data('scored')){
+//        score++;
+//        $("#score").html(score);
+//        $("#finalScore").html(score);
+//        $(elem).data('scored', true);
+//     }
+// }
+// var score = 0;
+//
+// $('#finalScore').text(score);
+// function foundMatchingBlocks(event, params) {
+//       target.classList.remove();
+//       score += 1;
+//       $('#finalScore').text(score);
+// }
+
+
 // array with all possible answers for computer to add when user clicks
 const calculateWinner = (miniBoxes) => {
   const possibleAnswers = [
@@ -71,7 +93,7 @@ const calculateWinner = (miniBoxes) => {
 // depending on the if statement is the level of difficulty that is given to the user
 for (let i = 0; i < possibleAnswers.length; i++) {
   const [a, b, c] = possibleAnswers[i];
-  if (miniBoxes[a] && miniBoxes[a] === miniBoxes[b] && miniBoxes[a] === miniBoxes[c]) {
+  if (miniBoxes[a] && miniBoxes[a] === miniBoxes[b] && miniBoxes[b] === miniBoxes[c]) {
       return miniBoxes[a];
     }
   }
@@ -111,7 +133,7 @@ start.playGame = !start.playGame
 })
 
 
-// added some cool sounds when clicking and entering the page, feel free to help and add more cool stuff like this! 
+// added some cool sounds when clicking and entering the page, feel free to help and add more cool stuff like this!
 
 // sound when the user decides if X or O at the beginning
 let beep = new Audio();
